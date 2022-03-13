@@ -1,0 +1,69 @@
+// Header
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+.header {
+    background-color: $fourth-color;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        color: white;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 25px;
+        text-decoration: none;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+// Pagination 
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn--pagination {
+    padding: 2px 8px;
+    color: $fourth-color;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn--disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    &:hover {
+        cursor: default;
+    }
+}
+
+// İnput
+
+.inpt {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &--search {
+        background: url("https://img.icons8.com/ios-glyphs/20/000000/search--v1.png") no-repeat;
+        background-position: calc(100% - 12px);
+    }
+}
+
+// Table
+
+
+
