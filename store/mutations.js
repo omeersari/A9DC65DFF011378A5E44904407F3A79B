@@ -8,7 +8,6 @@ const Mutations = {
     SLICE_FILTERED_LIST(state, payload) {
       const index = (payload - 1) * 10
       state.filteredList.slice(index, index + 10)
-      console.log(state.filteredList)
     },
     SORT_LIST(state, payload) {
         state.productList = state.productList.sort((a, b) => {
