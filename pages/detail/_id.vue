@@ -30,7 +30,11 @@
         </div>
         <span class="seperator"></span>
         <div class="card__options">
-          <div v-for="item in images" :key="item.id" @click="changeMainImage(item)">
+          <div
+            v-for="item in images"
+            :key="item.id"
+            @click="changeMainImage(item)"
+          >
             <img class="card__img--sm" :src="item.src" alt="" />
           </div>
         </div>
@@ -41,16 +45,25 @@
 
 <script>
 export default {
+  // to not to lose data if page refresh. Otherwise dont need this.
+  async asyncData({ $axios, error }) {
+    try {
+      const response = await $axios.$get('products')
+      return { data: response }
+    } catch (e) {
+      error({ statusCode: e.response.status, message: e.message })
+    }
+  },
   data() {
     return {
       item: '',
-      clickedItem: ""
+      clickedItem: '',
     }
   },
   created() {
     const id = this.$route.params.id
-    this.item = this.$store.state.productList.filter((el) => el.id == id)[0]
-    this.mainImage()
+    this.item = this.data.products.filter((el) => el.id == id)[0]
+    this.$store.commit('SET_ITEM', this.item)
   },
   computed: {
     title() {
@@ -63,7 +76,7 @@ export default {
       return this.item.options
     },
     image() {
-        return this.item.image
+      return this.item.image
     },
     images() {
       return this.item.images
@@ -74,17 +87,16 @@ export default {
   },
   methods: {
     mainImage() {
-        if (this.clickedItem) {
-            return this.clickedItem.src
-        }
-        else {
-            return this.image.src
-        }
+      if (this.clickedItem) {
+        return this.clickedItem.src
+      } else {
+        return this.image.src
+      }
     },
     changeMainImage(item) {
-        this.clickedItem = item
-        this.mainImage()
-    }
-  }
+      this.clickedItem = item
+      this.mainImage()
+    },
+  },
 }
 </script>

@@ -17,6 +17,9 @@ const Mutations = {
               return parseFloat(b.variants[0].price - a.variants[0].price)
             }
           })
+    },
+    SET_ITEM(state, payload) {
+      state.item = payload
     }
 }
 

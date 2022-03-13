@@ -1,6 +1,7 @@
 const States = {
     productList: [],
-    filteredList: []
+    filteredList: [],
+    item: ""
 }
 
 export default States
