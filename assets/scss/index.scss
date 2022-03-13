@@ -77,6 +77,10 @@ body {
         padding: 12px;
         font-size: 14px;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include breakpoint(sm) {
             font-size: 16px;
         }
