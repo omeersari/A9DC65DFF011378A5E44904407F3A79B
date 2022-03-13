@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+$first-color : #f8ed86; 
+$second-color: #a5e9db;
+$third-color: #2ca4bf;
+$fourth-color: #415b90;
+
+
+.btn {
+    height: initial;
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 12px 30px;
+    font-size: 12px;
+    line-height: 24px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+    color: #959595;
+    vertical-align: middle;
+    word-break: inherit;
+}
+
+input {
+    margin-top: 5px;
+    border: 1px solid #d0d7de;
+    border-radius: 5px;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 5px 12px;
+    outline: $first-color;
+    width: 100%;
+}
+	
