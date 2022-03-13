@@ -3,6 +3,8 @@
 You can go to the project: https://simpleshopp.vercel.app/
 ## Build Setup
 
+Download this repository and in your terminal run (.env is required for local run):
+ 
 ```bash
 # install dependencies
 $ npm install
@@ -15,7 +17,7 @@ $ npm run test
 ```
 
 
-# Used Tech and Libraries and Notes
+# Used Tech and Notes
 
 - Nuxt is used.
 - SASS is used for styling. Responsive design is applied.
@@ -23,6 +25,7 @@ $ npm run test
 - To run the project locally, .env file is required. 
 - To style code, prettier is used.
 - Deployment is made with Vercel.
+- 2 simple tests are applied. One of them checks for header title and other checks props of Pagination.
 
 
 # Pages
