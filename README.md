@@ -1,5 +1,6 @@
 # simpleshop
 
+You can go to the project: https://simpleshopp.vercel.app/
 ## Build Setup
 
 ```bash
@@ -9,60 +10,35 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+# to run tests
+$ npm run test
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Special Directories
+# Used Tech and Libraries and Notes
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+- Nuxt is used.
+- SASS is used for styling. Responsive design is applied.
+- For API request axios is used. (see nuxt.config.js >> axios)
+- To run the project locally, .env file is required. 
+- To style code, prettier is used.
+- Deployment is made with Vercel.
 
-### `assets`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+# Pages
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+## homepage
 
-### `components`
+A get request is made to list the products. Products are shown with their images, names and prices. Pagination is applied with pagination component.
+ 
+- Each page includes 10 items.
+- User can search items by their name.
+- User can sort items by their price. (If there is a search filter, it will only sort searched items.)
+- User can click on an item to go to a detail page of that item.
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## detail/:id
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Array filter method is used to get requested item by it's id. 
 
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- User can see details of the item.
+- User can click different images of item to see that on the left side of the page.
