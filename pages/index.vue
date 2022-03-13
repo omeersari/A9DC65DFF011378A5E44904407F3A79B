@@ -86,7 +86,7 @@ export default {
       if (!this.search) {
         return this.products.slice(index, index + 10)
       } else {
-        this.currentPage = 1
+        // this.currentPage = 1
         const searchText = this.search.toLowerCase()
         const newList = this.$store.state.productList.filter((item) =>
           item.title.toLowerCase().includes(searchText)
